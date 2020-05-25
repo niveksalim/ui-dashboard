@@ -1,0 +1,54 @@
+<div class="grid-container">
+  <div class="menu-icon" (click)="openMenu()">
+    <i class="fas fa-bars header__menu"></i>
+  </div>
+
+  <header class="header">
+    <div class="header__search">Search...</div>
+    <div class="header__avatar">
+      <img
+        src="https://avatars.dicebear.com/api/bottts/example.svg?options[colors][]=cyan"
+        alt="Brew master"
+      />
+    </div>
+  </header>
+
+  <app-side-nav [ngClass]="{ active: isOpen$ | async }"></app-side-nav>
+
+  <main class="main">
+    <div class="main-header">
+      <div class="main-header__heading">Welcome, Brewmaster!</div>
+      <div class="main-header__updates">Recent Items</div>
+    </div>
+
+    <div class="main-overview">
+      <div class="overviewcard">
+        <div class="overviewcard__icon">
+          <span>Total beers sold</span>
+          <span>30k</span>
+        </div>
+        <div class="overviewcard__info">
+          <app-overview></app-overview>
+        </div>
+      </div>
+      <div class="overviewcard">
+        <div class="overviewcard__icon">Overview</div>
+        <div class="overviewcard__info">Card</div>
+      </div>
+      <div class="overviewcard">
+        <div class="overviewcard__icon">Overview</div>
+        <div class="overviewcard__info">Card</div>
+      </div>
+      <div class="overviewcard">
+        <div class="overviewcard__icon">Overview</div>
+        <div class="overviewcard__info">Card</div>
+      </div>
+    </div>
+
+    <div class="main-cards">
+      <div class="card">Card</div>
+      <div class="card">Card</div>
+      <div class="card">Card</div>
+    </div>
+  </main>
+</div>
